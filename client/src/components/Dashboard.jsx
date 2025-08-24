@@ -30,7 +30,7 @@ const Dashboard = () => {
   const fetchFolders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://filo-one.vercel.app/api/folders', {
+      const response = await fetch('http://localhost:4000/api/folders', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -59,7 +59,7 @@ const Dashboard = () => {
         params.append('search', searchQuery);
       }
 
-      const response = await fetch(`https://filo-one.vercel.app/api/images?${params}`, {
+      const response = await fetch(`http://localhost:4000/api/images?${params}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

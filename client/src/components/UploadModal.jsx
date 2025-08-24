@@ -64,7 +64,7 @@ const UploadModal = ({ onClose, currentFolder, folders, refreshData }) => {
         uploadData.append('folderId', formData.folderId);
       }
 
-      const response = await fetch('https://filo-one.vercel.app/api/images/upload', {
+      const response = await fetch('http://localhost:4000/api/images/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
