@@ -17,7 +17,7 @@ const FileExplorer = ({
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:4000/api/images/${imageId}`, {
+      const response = await fetch(`https://filo-one.vercel.app/api/images/${imageId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -181,7 +181,7 @@ const FileExplorer = ({
                   >
                     <div className="aspect-square overflow-hidden">
                       <img
-                        src={`http://localhost:4000/uploads/${image.filename}`}
+                        src={`https://filo-one.vercel.app/uploads/${image.filename}`}
                         alt={image.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
@@ -209,7 +209,7 @@ const FileExplorer = ({
                       
                       <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
                         <a
-                          href={`http://localhost:4000/uploads/${image.filename}`}
+                          href={`https://filo-one.vercel.app/uploads/${image.filename}`}
                           download={image.originalName}
                           className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/20 rounded-lg transition-all duration-200"
                           title="Download"

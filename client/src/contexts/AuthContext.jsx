@@ -12,7 +12,7 @@ export const useAuth = () => {
   return context;
 };
 
-const API_BASE_URL = 'http://localhost:4000/api';
+const API_BASE_URL = 'https://filo-one.vercel.app/api';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUser = async (token) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/me`, {
+      const response = await fetch(`https://filo-one.vercel.app/auth/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

@@ -26,7 +26,7 @@ const CreateFolderModal = ({ onClose, currentFolder, refreshData }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:4000/api/folders', {
+      const response = await fetch('https://filo-one.vercel.app/api/folders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
